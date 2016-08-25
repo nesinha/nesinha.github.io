@@ -1,9 +1,14 @@
 /* Styles go here */
 
-.screen-div{
+.mytimeline{
   height:600px;
+  padding-left:100px;
 }
 
+.myskills{
+  height:600px;
+  background-color:white;
+}
 
 li{
   display:inline-block;
@@ -29,7 +34,8 @@ ul
 
 .myheader{
 font-family: 'Denk One', sans-serif;
-background-color:#f27900;  
+/*background-color:#f27900;  */
+background-color:black;
 color:#ffffff;
 font-size:20px;
 }
@@ -42,7 +48,7 @@ font-size:20px;
 {
   padding-left:10px;
   font-family: 'Denk One', sans-serif;
-  color:#000000;
+  color:#ffffff;
 }
 
 .mypic > img{
@@ -54,6 +60,7 @@ font-size:20px;
   background-color:white;
   color:Black;
   font-family: 'Slabo 27px', serif;
+  height:464px;
 }
 
 .desc{
@@ -75,6 +82,7 @@ body {
 html, body {
     margin: 0;
     padding: 0;
+    background:#D3D3D3;
 }
 
 h2 {
@@ -93,6 +101,13 @@ p.footer {
 
 .highcharts-container{
   float:inherit;
+}
+
+
+.about{
+  background-image:url("https://farm9.staticflickr.com/8047/29108492052_261286053a_h.jpg");
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://farm9.staticflickr.com/8047/29108492052_261286053a_h.jpg);
 }
 
 
