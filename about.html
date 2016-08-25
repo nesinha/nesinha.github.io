@@ -1,0 +1,70 @@
+<div ng-controller="aboutController" class="container-fluid" >
+
+<div class="row screen-div about">
+  <div class="title mypic text-center">
+      <h1> < about me > </h1> 
+      <p class="desc">Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual </p>
+      <nav id="more-links">
+			<ul>
+				<li id="more-timeline"><a href="#mytimeline">checkout my timeline</a></li>
+	      <li id="more-chart"> <a href="#myskills">checout my skills</a></li>
+			</ul>
+			</nav>
+  </div>
+</div><br>
+
+
+  <div class="row mytimeline" id="mytimeline">
+    
+    <div class="col-xs-6">
+      <h2>My journey so far..</h2>
+      <ul class="timeline" data-ng-repeat="mydata in timelineEvents">
+      <li ng-if="$even">
+          <div class="timeline-badge">
+            <a><i class="fa fa-circle" id=""></i></a>
+          </div>
+          <div class="timeline-panel">
+              <div class="timeline-heading">
+                  <h5>{{mydata.Event}}</h5>
+              </div>
+             
+              <div class="timeline-footer">
+                  <p class="text-right">{{mydata.On}}</p>
+              </div>
+          </div>
+      </li>
+      
+      <li ng-if="$odd" class="timeline-inverted">
+          <div class="timeline-badge">
+              <a><i class="fa fa-circle" id=""></i></a>
+          </div>
+          <div class="timeline-panel">
+              <div class="timeline-heading">
+                  <h5>{{mydata.Event}}</h5>
+              </div>
+              <div class="timeline-footer">
+                  <p class="text-right">{{mydata.On}}</p>
+              </div>
+          </div>
+      </li>
+      
+      <li class="clearfix no-float"></li>
+  </ul>
+    </div>
+    <div class="col-xs-6"></div>
+   
+  </div>
+
+
+<div class="row myskills" id="myskills">
+  <a name="myskills"></a>
+<div class="col-xs-6"></div>
+<div class="title col-xs-6">
+<hc-chart options="chartOptions"></hc-chart>
+</div>
+</div>
+
+
+  
+
+</div>
