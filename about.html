@@ -1,6 +1,6 @@
-<div ng-controller="aboutController" class="container">
+<div ng-controller="aboutController" class="container-fluid" >
 
-<div class="row screen-div">
+<div class="row screen-div about">
   <div class="title mypic text-center">
       <h1> < about me > </h1> 
       <p class="desc">Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual </p>
@@ -14,12 +14,11 @@
 </div><br>
 
 
-  <div class="row screen-div" id="mytimeline">
-    <a name="mytimeline"></a>
+  <div class="row mytimeline" id="mytimeline">
+    
     <div class="title col-xs-6">
       <h2 class="title">My journey so far..</h2>
-
-  <ul class="timeline" data-ng-repeat="mydata in timelineEvents">
+      <ul class="timeline" data-ng-repeat="mydata in timelineEvents">
       <li ng-if="$even">
           <div class="timeline-badge">
             <a><i class="fa fa-circle" id=""></i></a>
@@ -53,10 +52,11 @@
   </ul>
     </div>
     <div class="col-xs-6"></div>
+   
   </div>
 
 
-<div class="row screen-div" id="myskills">
+<div class="row myskills" id="myskills">
   <a name="myskills"></a>
 <div class="col-xs-6"></div>
 <div class="title col-xs-6">
