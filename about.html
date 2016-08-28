@@ -6,12 +6,12 @@
       <p class="desc">Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual </p>
       <nav id="more-links">
 			<ul>
-				<li id="more-timeline"><div class="badge">
-       <a href="#mytimeline" class="image" target="_blank"> <img src="" alt="my timeline" ></a>
+				<li id="more-timeline"><div class="circle">
+       <a href="" ng-click="gotoMytimeline()" class=""> <img src="" alt="my timeline" ></a>
         
       </div></li>
-	      <li id="more-skills"><div class="badge">
-       <a href="#myskills" class="image" target="_blank"> <img src="" alt="my skills" ></a>
+	      <li id="more-skills"><div class="circle">
+       <a href="" class="" ng-click="gotoMyskills()"> <img src="" alt="my skills" ></a>
         
       </div></li>
 			</ul>
@@ -20,8 +20,7 @@
 </div><br>
 
 
-  <div class="row mytimeline" id="mytimeline">
-    
+  <div id="mytimeline" class="mytimeline row" >
     <div class="col-xs-6">
       <h2>My journey so far..</h2>
       <ul class="timeline" data-ng-repeat="mydata in timelineEvents">

@@ -23,9 +23,21 @@ app.config(function($routeProvider){
 });
 
 
-app.controller("aboutController",function($scope){
+app.controller("aboutController",['$scope','$location', '$anchorScroll', 
+function($scope,$location, $anchorScroll){
   
   $scope.pageClass = "page-about";
+  $scope.gotoMytimeline = function()
+  {
+     $location.hash('mytimeline');
+      $anchorScroll();
+  };
+  $scope.gotoMyskills = function()
+  {
+     $location.hash('myskills');
+      $anchorScroll();
+  };
+  
  $scope.timelineEvents=[{Event:'Graduating soon',Desc:'bah bah',On:'April-2017'},
  {Event:'Teaching Assistant',Desc:'bah bah',On:'August-2016'},
  {Event:'Joined UCSD',Desc:'ehi',On:'Sept-2015'},
@@ -68,7 +80,7 @@ app.controller("aboutController",function($scope){
   
   };
   
-});
+}]);
 
 app.controller("portfolioController",function($scope){
   $scope.pageClass = "page-portfolio";
