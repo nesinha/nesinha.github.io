@@ -1,37 +1,13 @@
-/* Styles go here */
+/* Styles in common - begin */
 
-.mytimeline{
-  height:600px;
-  padding-left:100px;
+body {
+    font-family: 'Slabo 27px', serif; 
 }
 
-.myskills{
-  height:500px;
-  background-color:white;
-  padding-top:100px;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
-
-.portfolio{
-  height:600px;
-  
-}
-.contact{
-  height:500px;
-  
-}
-
-.circle
-    {
-    width:100px;
-    height:100px;
-    border-radius:50px;
-    font-size:px;
-    color:#000;
-    line-height:100px;
-    text-align:center;
-    background:#fff
-    }
-
 
 li{
   display:inline-block;
@@ -41,33 +17,153 @@ ul
 {
   width:100%;
 }
+/* Styles in general - end */
 
+/* Styles in header-footer - begin */
+.myheader{
+font-family: 'Denk One', sans-serif;
+font-size:25px;
+background-color:#20263C;;
+}
+.my-nav-link{
+  color:white;
+}
 
+.vertical-align-header{
+  padding-top:10px;
+}
 
-.mynavheader > ul > li > a{
-  color:#ffffff;
+.vertical-align-footer{
+  padding-top:25px;
+}
+.navbar{
+  margin-bottom: 2px;
+}
+
+.social{
+  position:relative;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-size:10px;
+  padding-top: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.social:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #337ab7;
 }
 
 .mynavfooter> ul > li > a{
-  color:#f27900;
+  color:#337ab7;
+}
+/* Styles in header-footer - end */
+
+.timelinecircle
+{
+  background:#8c8c8c
 }
 
-.myheader{
-font-family: 'Denk One', sans-serif;
-/*background-color:#f27900;  */
-background-color:black;
-color:#ffffff;
-font-size:20px;
-width:100%;
+.skillcircle{
+ 
+ background:#38a9e4 
+}
+
+.aboutmecircle{
+  background:green;
+}
+
+.circle
+    {
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:px;
+    line-height:100px;
+    text-align:center;
+    display: inline-block;
+    
+    }
+
+.circle p{
+  color:black;
+}
+
+.circle  {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.circle:hover {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+.about{
+  background-color:white;
+  color:Black;
+  font-family: 'Slabo 27px', serif;
+  height:464px;
+  background-image:url("https://farm9.staticflickr.com/8047/29108492052_261286053a_h.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
 }
 
 
+/* Styles in about page - begin */
+
+
+
+.mytimeline{
+  height:600px;
+  padding-left:100px;
+}
+
+.portfolio{
+  height:600px;
+  
+}
+
+.myskills{
+  height:500px;
+  background-color:white;
+  padding-top:100px;
+}
+
+.contact{
+  height:500px;
+  background-color:grey;
+  
+}
 
 .title
 {
   padding-left:10px;
   font-family: 'Denk One', sans-serif;
-  color:#ffffff;
+  color:#000000;
 }
 
 .mypic > img{
@@ -75,59 +171,23 @@ width:100%;
   width: 40em;
 }
 
-.about{
-  background-color:white;
-  color:Black;
-  font-family: 'Slabo 27px', serif;
-  height:464px;
-}
 
 .desc{
   font-family: 'Slabo 27px', serif;
   font-weight:bold;
   font-size:18px;
+  
 }
 
 .screen-div{
   margin-bottom:20px;
-  margin-top:20px;
 }
 
-body {
-    font-family: 'Slabo 27px', serif; 
-    font-weight: 300; 
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-
-}
-
-h2 {
-    margin-bottom: 30px;
-    color: #4679bd;
-    font-weight: 400;
-    text-align: center;
-}
-
-p.footer {
-    margin-bottom: 20px;
-    color: #999999;
-    font-size: 18px;
-    text-align: center;
-}
 
 .highcharts-container{
   float:inherit;
 }
 
-
-.about{
-  background-image:url("https://farm9.staticflickr.com/8047/29108492052_261286053a_h.jpg");
-  background-repeat: no-repeat;
-  /*background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://farm9.staticflickr.com/8047/29108492052_261286053a_h.jpg);*/
-}
 
 .thumbnail {
     width: 320px;
@@ -155,21 +215,7 @@ p.footer {
      transform:scale(1.25);
 }
 
-.circle  {
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* IE 9 */
-    -o-transition: all 1s ease; /* Opera */
-    transition: all 1s ease;
-}
 
-.circle:hover {
-    -webkit-transform:scale(1.25); /* Safari and Chrome */
-    -moz-transform:scale(1.25); /* Firefox */
-    -ms-transform:scale(1.25); /* IE 9 */
-    -o-transform:scale(1.25); /* Opera */
-     transform:scale(1.25);
-}
 
 
 /* -----------------------------------------------

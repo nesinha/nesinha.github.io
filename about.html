@@ -1,26 +1,42 @@
-<div ng-controller="aboutController" class="container-fluid" >
+<div ng-controller="aboutController" class="container-fluid " >
 
-<div class="row screen-div about">
+<div class="row screen-div about ">
   <div class="title mypic text-center">
       <h1> < about me > </h1> 
-      <p class="desc">Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual </p>
       <nav id="more-links">
 			<ul>
-				<li id="more-timeline"><div class="circle">
-       <a href="" ng-click="gotoMytimeline()" class=""> <img src="" alt="my timeline" ></a>
+			  
+			 <li id="about-me"><div class="circle aboutmecircle">
+       <a href="" class="" ng-click="gotoAbout()"><p> About Me</p> </a>
         
       </div></li>
-	      <li id="more-skills"><div class="circle">
-       <a href="" class="" ng-click="gotoMyskills()"> <img src="" alt="my skills" ></a>
+      
+				<li id="more-timeline"><div class="circle timelinecircle">
+       <a href="" ng-click="gotoMytimeline()" class=""><p> my timeline</p> </a>
         
       </div></li>
+	      <li id="more-skills"><div class="circle skillcircle">
+       <a href="" class="" ng-click="gotoMyskills()"><p> my skills</p> </a>
+        
+      </div></li>
+      
+      
 			</ul>
 			</nav>
   </div>
 </div><br>
 
-
-  <div id="mytimeline" class="mytimeline row" >
+<section>
+<div class="row aboutme title" id="aboutme">
+  <a name="aboutme"></a>
+ <div class="title text-center">
+      <h1> < about me > </h1> 
+      <p class="desc">Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual </p>
+</div>
+</div>
+</section>
+<section>
+<div id="mytimeline" class="mytimeline row" >
     <div class="col-xs-6">
       <h2>My journey so far..</h2>
       <ul class="timeline" data-ng-repeat="mydata in timelineEvents">
@@ -56,11 +72,17 @@
       <li class="clearfix no-float"></li>
   </ul>
     </div>
-    <div class="col-xs-6"></div>
+    <div class="col-xs-6">
+      <a href="http://www.freeiconspng.com/uploads/resume-icon-png-5.png" download>
+  <img border="0" src="http://www.freeiconspng.com/uploads/resume-icon-png-5.png" alt="W3Schools" width="104" height="142">
+</a>
+      
+    </div>
    
   </div>
+</section>
 
-
+<section>
 <div class="row myskills" id="myskills">
   <a name="myskills"></a>
 <div class="col-xs-6"></div>
@@ -68,7 +90,7 @@
 <hc-chart options="chartOptions"></hc-chart>
 </div>
 </div>
-
+</section>
 
   
 

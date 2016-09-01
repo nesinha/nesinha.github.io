@@ -38,6 +38,12 @@ function($scope,$location, $anchorScroll){
       $anchorScroll();
   };
   
+  $scope.gotoAbout = function()
+  {
+    $location.hash('aboutme');
+      $anchorScroll();
+  }
+  
  $scope.timelineEvents=[{Event:'Graduating soon',Desc:'bah bah',On:'April-2017'},
  {Event:'Teaching Assistant',Desc:'bah bah',On:'August-2016'},
  {Event:'Joined UCSD',Desc:'ehi',On:'Sept-2015'},
@@ -85,9 +91,26 @@ function($scope,$location, $anchorScroll){
 app.controller("portfolioController",function($scope){
   $scope.pageClass = "page-portfolio";
 });
-app.controller("contactController",function($scope){
+
+
+app.controller("contactController",['$scope','$http', function($scope,$http){
   $scope.pageClass = "page-contact";
+  $scope.user = {};
+  $scope.send = function(){
+ $http({
+    url: "//formspree.io/28neha@gmail.com", 
+    method: "POST",
+    data:$scope.user,
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  
 });
+alert('Thanks for the email.');
+}
+
+}]);
 
 
 app.directive('myPortfolioHeader', function() {
