@@ -123,7 +123,7 @@ background-color:#20263C;;
     width:100px;
     height:100px;
     border-radius:50px;
-    font-size:px;
+    font-size:10px;
     line-height:100px;
     text-align:center;
     display: inline-block;
@@ -199,7 +199,13 @@ h1.textwithshadow:nth-child(2)
 
 
 
-
+.v-align {
+    padding: 10px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.box {}
 
 
 
@@ -222,8 +228,8 @@ h1.textwithshadow:nth-child(2)
 }
 
 .contact{
-  height:500px;
-  background-color:grey;
+  
+  height:75vh;
   
 }
 
@@ -285,7 +291,6 @@ h1.textwithshadow:nth-child(2)
 
 
 
-
 /* -----------------------------------------------
  * Timeline
  * --------------------------------------------- */
@@ -301,7 +306,7 @@ h1.textwithshadow:nth-child(2)
     position: absolute;
     content:" ";
     width: 3px;
-    background: #000000;
+    background: #ffffff;
     left: 50%;
     margin-left: -1.5px;
 }
@@ -312,21 +317,7 @@ h1.textwithshadow:nth-child(2)
     float: left;
     clear: left;
 }
-/*.timeline > li:before, .timeline > li:after {
-    content:" ";
-    display: table;
-}
 
-.timeline > li:after {
-    clear: both;
-}
-.timeline > li:before, .timeline > li:after {
-    content:" ";
-    display: table;
-}
-.timeline > li:after {
-    clear: both;
-}*/
 .timeline > li > .timeline-panel {
     width: calc(100% - 20px);
     width: -moz-calc(100% - 20px);
@@ -359,7 +350,7 @@ h1.textwithshadow:nth-child(2)
     content:" ";
 }
 .timeline > li > .timeline-badge {
-    color: #000000;
+    color: #ffffff;
     width: 24px;
     height: 24px;
     line-height: 50px;
@@ -385,7 +376,7 @@ h1.textwithshadow:nth-child(2)
     right: auto;
 }
 .timeline-badge > a {
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 .timeline-badge a:hover {
     color: #dcdcdc !important;
@@ -399,22 +390,21 @@ h1.textwithshadow:nth-child(2)
     padding: 0 15px;
     color: #4679bd;
 }
+.timeline-image{
+  width:30px;
+}
 
+.timeline-footer{
+  color:black;
+  padding-right:10px;
+}
 .timeline-body > p, .timeline-body > ul {
     padding: 10px 15px;
     margin-bottom: 0;
     color:black;
     font-family: 'Slabo 27px', serif;
 }
-.timeline-footer {
-    padding: 5px 15px;
-   /* background-color:#dcdcdc;*/
-}
-.timeline-footer p { margin-bottom: 0; }
-.timeline-footer > a {
-    cursor: pointer;
-    text-decoration: none;
-}
+
 .timeline > li.timeline-inverted {
     float: right;
     clear: right;

@@ -55,6 +55,7 @@
 </div>
 </div>
 </section>
+
 <section class="row mytimeline">
 <div id="mytimeline">
     <div class="col-xs-6">
@@ -66,9 +67,9 @@
           </div>
           <div class="timeline-panel">
               <div class="timeline-heading">
-                  <h5>{{mydata.Event}}</h5>
-              </div>
-             
+                <h5><img class="timeline-image" ng-src="{{mydata.Pic}}"/> {{mydata.Event}}</h5> 
+                
+                </div>
               <div class="timeline-footer">
                   <p class="text-right">{{mydata.On}}</p>
               </div>
@@ -81,8 +82,8 @@
           </div>
           <div class="timeline-panel">
               <div class="timeline-heading">
-                  <h5>{{mydata.Event}}</h5>
-              </div>
+                  <h5><img class="timeline-image" ng-src="{{mydata.Pic}}"/> {{mydata.Event}}</h5>
+                </div>
               <div class="timeline-footer">
                   <p class="text-right">{{mydata.On}}</p>
               </div>
@@ -93,9 +94,10 @@
   </ul>
     </div>
     
-    
-    <div class="col-xs-6">
-      
+    <div style='display: table; height:600px' class="col-xs-6">
+      <div class="v-align">
+        <div class="box"></div>
+      </div>
     </div>
    
   </div>
