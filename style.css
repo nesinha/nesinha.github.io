@@ -116,12 +116,13 @@ background-color:#20263C;;
     -o-transform:scale(1.25); /* Opera */
      transform:scale(1.25);
 }
+
 .about{
   background-color:white;
   color:Black;
   font-family: 'Slabo 27px', serif;
   height:464px;
-  background-image:url("https://farm9.staticflickr.com/8047/29108492052_261286053a_h.jpg");
+  background-image:url("http://i.imgur.com/zySGmx0.jpg");
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -130,6 +131,33 @@ section {
   width: 100%;
   max-width: none;
   height: 100vh;
+}
+
+h1
+{
+white-space: nowrap;
+overflow: hidden;
+width: 30em;
+animation: type 4s steps(60, end);
+}
+
+h1:nth-child(2)
+{
+  animation: type2 8s steps(60, end);
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
 }
 
 
