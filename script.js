@@ -100,7 +100,7 @@ app.controller("contactController",['$scope','$http', function($scope,$http){
  $http({
     url: "//formspree.io/28neha@gmail.com", 
     method: "POST",
-    data:$scope.user,
+    data:JSON.stringify($scope.user),
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -119,6 +119,20 @@ app.directive('myPortfolioHeader', function() {
   };
 });
 
+app.directive('toolTip', function(){
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs){
+            $(element).hover(function(){
+                // on mouseenter
+                $(element).tooltip('show');
+            }, function(){
+                // on mouseleave
+                $(element).tooltip('hide');
+            });
+        }
+    };
+});
 
 
 
