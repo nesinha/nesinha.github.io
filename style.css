@@ -211,7 +211,7 @@ h1.textwithshadow:nth-child(2)
   -moz-animation:bounce 1s infinite;
 }
 
-@-moz-keyframes bounce {
+@keyframes bounce {
   0%       { bottom:5px; }
   25%, 75% { bottom:15px; }
   50%      { bottom:20px; }
