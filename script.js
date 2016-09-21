@@ -27,6 +27,7 @@ app.controller("aboutController",['$scope','$location', '$anchorScroll',
 function($scope,$location, $anchorScroll){
   
   $scope.pageClass = "page-about";
+  $scope.ddesc= "Default";
   $scope.gotoMytimeline = function()
   {
      $location.hash('mytimeline');
@@ -44,6 +45,11 @@ function($scope,$location, $anchorScroll){
       $anchorScroll();
   }
   
+  
+
+
+  $scope.aboutcontent=[{Intro:"I am an India-native now living in San Diego, California, pursuing my Masters in Computer Science. I am interested in creating scalable web apps with amazingly great UI/UX. Previously I worked full time on e-commerce website of Microchip Technology.",Tech:"I am specialized in Microsoft .Net web forms and MVC architecture. I am conformtable with javaScript, CSS, bootstrap. I can also talk to database(MYSQL) using ADO.NET and Entity Relationship. I am exploring angular javascript and have built this website using angular javascript. I like working on scalability, performance, design, and great user experiences. ", Passtime:"My favourite passtime is to read a book (novel or inspirational) sipping a cup of coffee!"}];
+  
  $scope.timelineEvents=[{Event:'Graduating soon',Desc:'bah bah',On:'April-2017',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
  {Event:'Teaching Assistant',Desc:'bah bah',On:'August-2016',Pic:'http://www.sysnet.ucsd.edu/~voelker/pubcom/logo/CSELogo_RGB.gif'},
  {Event:'Joined UCSD',Desc:'ehi',On:'Sept-2015',Pic:'http://www.universityreview.org/wp-content/uploads/2012/03/University-of-California-San-Diego-Seal.png'},
@@ -53,8 +59,20 @@ function($scope,$location, $anchorScroll){
  {Event:'Joined MSRIT',Desc:'I joined M.S. Ramaiah Institute of Technology, Bangalore, India to pursue bachelors in Computer Science. MSRIT is one the top five college in the state of karnataka. Checkout wiki for more information.',On:'Sept-09-2009',Pic:'https://upload.wikimedia.org/wikipedia/en/b/b8/MSRIT_Golden_Jubilee_Logo.png'}
  ];
  
- $scope.yAxisLabels = ['Uh? Next Question','Basic','Medium','Pretty Good','Master'];
- $scope.yAxisLabel = ['Basic','Medium','Pretty Good','Master'];
+ $scope.showPopover = function(data) {
+  $scope.popoverIsVisible = true; 
+  $scope.description=data;
+ 
+ };
+
+$scope.hidePopover = function () {
+  $scope.popoverIsVisible = false;
+ 
+};
+ 
+ 
+ $scope.yAxisLabel = ['less than 1','1-2','2-3','3-4','4 and above'];
+ 
  
   $scope.chartOptions = {
     chart: {
@@ -65,21 +83,25 @@ function($scope,$location, $anchorScroll){
          text: 'My skills'
           },
   xAxis: {
-           //categories: ['HTML & CSS', 'Javascript & Jquery', 'C# .net webforms', '.net MVC']
-           categories: ['Excel','Sql','R','Python','Power BI','Tableau','Apache Pig','Hive QL','Google Analytics','Html & CSS']
+           categories: ['HTML & CSS', 'Javascript & Jquery', 'C# .net webforms', '.net MVC','Angular','Bootstrap','C++','SQL']
+           
          },
 
   series: [{
-           data: [3,2,2,1,2,2,1,1,0.5,0.5]
+           data: [3,2,2,1,2,5,1,4]
           }],
           
  yAxis: { 
          min: 0,
-         max: 3,
+         max: 4,
+         title: {
+                text: 'Years of Experience'
+            },
         labels: {
             formatter: function() {
                 return $scope.yAxisLabel[this.value];
             }
+          
         }
     }
        

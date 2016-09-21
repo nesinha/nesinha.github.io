@@ -1,21 +1,21 @@
 <div ng-controller="aboutController" class="container-fluid " >
 
 <div class="row screen-div about">
-  <div class="title mypic text-center ">
-      <h1 class="textwithshadow"> Hi, I am Neha! Good to see you here on my website! </h1>
+  <div class="title mypic ">
+      <h1 class="textwithshadow"> Hi, I am Neha! </h1>
       <nav id="more-links">
-			<ul>
+			<ul class="text-center">
 			  
 			 <li id="about-me"><div class="circle aboutmecircle">
        <a href="" class="" ng-click="gotoAbout()"><p> About Me</p> </a>
         
       </div></li>
       
-				<li id="more-timeline"><div class="circle timelinecircle">
+				<li id="more-timeline"><div class="circle skillcircle">
        <a href="" ng-click="gotoMytimeline()" class=""><p> my timeline</p> </a>
         
       </div></li>
-	      <li id="more-skills"><div class="circle skillcircle">
+	      <li id="more-skills"><div class="circle aboutmecircle">
        <a href="" class="" ng-click="gotoMyskills()"><p> my skills</p> </a>
         
       </div></li>
@@ -31,27 +31,8 @@
   <a name="aboutme"></a>
  <div class="desc text-center">
       <h1 style="font-size:50px"> < about me > </h1> 
-      <p class="mytext">Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual </p>
-       <nav id="more-links">
-			<ul>
-			  
-			 <li id="about-me"><div class="circle aboutmecircle">
-       <a href="" class="" ng-click="gotoAbout()"><p> About Me</p> </a>
-        
-      </div></li>
+      <p class="mytext" data-ng-repeat="abtdata in aboutcontent">{{abtdata.Intro}}<br><br>{{abtdata.Tech}}<br><br>{{abtdata.Passtime}}</p>
       
-				<li id="more-timeline"><div class="circle timelinecircle">
-       <a href="" ng-click="gotoMytimeline()" class=""><p> my timeline</p> </a>
-        
-      </div></li>
-	      <li id="more-skills"><div class="circle skillcircle">
-       <a href="" class="" ng-click="gotoMyskills()"><p> my skills</p> </a>
-        
-      </div></li>
-      
-      
-			</ul>
-			</nav>
 </div>
 </div>
 </section>
@@ -65,22 +46,23 @@
           <div class="timeline-badge">
             <a><i class="fa fa-circle" id=""></i></a>
           </div>
-          <div class="timeline-panel">
+          <div class="timeline-panel" ng-mouseover="showPopover(mydata.Desc)" ng-mouseleave="hidePopover()">
               <div class="timeline-heading">
-                <h5><img class="timeline-image" ng-src="{{mydata.Pic}}"/> {{mydata.Event}}</h5> 
+                <h5 ><img class="timeline-image" ng-src="{{mydata.Pic}}"/> {{mydata.Event}}</h5> 
                 
                 </div>
               <div class="timeline-footer">
                   <p class="text-right">{{mydata.On}}</p>
               </div>
           </div>
+          
       </li>
       
       <li ng-if="$odd" class="timeline-inverted">
           <div class="timeline-badge">
               <a><i class="fa fa-circle" id=""></i></a>
           </div>
-          <div class="timeline-panel">
+          <div class="timeline-panel" ng-mouseover="showPopover(mydata.Desc)" ng-mouseleave="hidePopover()">
               <div class="timeline-heading">
                   <h5><img class="timeline-image" ng-src="{{mydata.Pic}}"/> {{mydata.Event}}</h5>
                 </div>
@@ -88,16 +70,21 @@
                   <p class="text-right">{{mydata.On}}</p>
               </div>
           </div>
+          
       </li>
       
       <li class="clearfix no-float"></li>
   </ul>
     </div>
     
-    <div style='display: table; height:600px' class="col-xs-6">
-      <div class="v-align">
-        <div class="box"></div>
-      </div>
+    <div class="col-xs-6">
+      
+    <div class="box panel panel-info text-center" ng-show="popoverIsVisible">
+      <div class="box-text text-center" ng-bind="description">
+        
+      </div>    
+    </div>   
+        
     </div>
    
   </div>
@@ -106,8 +93,8 @@
 <section class="row myskills">
 <div>
   <a name="myskills"></a>
-<div class="col-xs-6"></div>
-<div class="title col-xs-6">
+
+<div class="title">
 <hc-chart options="chartOptions"></hc-chart>
 </div>
 </div>
