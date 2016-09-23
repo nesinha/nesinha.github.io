@@ -76,7 +76,10 @@ $scope.hidePopover = function () {
  
   $scope.chartOptions = {
     chart: {
-         type: 'column'
+         type: 'column',
+          height: 450,
+          width: 850,
+          marginLeft:150
             },
   
    title: {
@@ -112,6 +115,9 @@ $scope.hidePopover = function () {
 
 app.controller("portfolioController",function($scope){
   $scope.pageClass = "page-portfolio";
+  $scope.projects = [{Link:'http://codepen.io/nesinha/full/RRZEww/',Type:'Random Quotes',Src:'http://i.imgur.com/It04LL9.png',Desc:'Used an API from mashape that has mutiple quotes. The application genrates new quotes upon click of button and changes the background color on every click. '},
+                     {Link:'http://codepen.io/nesinha/full/BLpvOR/',Type:'Weather Application',Src:'http://i.imgur.com/qnni1mY.png',Desc:'Used an API from openweathermap to detect current location and project it on map. It displays the temperature in degree celsius and fahreheit along with weather description. The weather icon changes based on weather type. '},
+                     {Link:'',Type:'Wikipedia Viewer',Src:'http://i.imgur.com/QO84elb.jpg',Desc:'Search for keywords with autopopulate feature. Display mutiple results based on search words. The result would direct to wikipedia page.'}];
 });
 
 
