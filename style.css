@@ -174,16 +174,14 @@ background-color:#20263C;;
   height:464px;
   background-image:url("http://i.imgur.com/zySGmx0.jpg");
   background-repeat: no-repeat;
-  height: 80vh;
+  
 }
 
 .textwithshadow{
   color:#000033;
   text-shadow: 2px 2px #666699;
 }
-.desc{
-  color:white;
-}
+
 
 .box-text{
   font-family: 'Tangerine', cursive;
@@ -192,7 +190,6 @@ background-color:#20263C;;
 
 section {
   max-width: none;
-  height: 100vh;
 }
 
 h1.textwithshadow
@@ -256,12 +253,12 @@ text-align: justify;
   color:white;
 }
 
-.portfolio{
-  height:500px;
+
+
+.proj-desc{
+  text-align: justify;
   
 }
-
-
 
 .myskills{
   background-color:white;
@@ -291,7 +288,7 @@ text-align: justify;
   font-family: 'Slabo 27px', serif;
   font-weight:bold;
   font-size:18px;
-  
+  color:white;
 }
 
 .screen-div{
