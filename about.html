@@ -12,11 +12,11 @@
       </div></li>
       
 				<li id="more-timeline"><div class="circle skillcircle">
-       <a href="" ng-click="gotoMytimeline()" class=""><p> my timeline</p> </a>
+       <a href="" ng-click="gotoMytimeline()" class=""><p> Timeline</p> </a>
         
       </div></li>
 	      <li id="more-skills"><div class="circle aboutmecircle">
-       <a href="" class="" ng-click="gotoMyskills()"><p> my skills</p> </a>
+       <a href="" class="" ng-click="gotoMyskills()"><p> Skills</p> </a>
         
       </div></li>
       
@@ -32,7 +32,7 @@
  <div class="desc text-center">
       <h1 style="font-size:50px"> < about me > </h1> 
       <p class="mytext" data-ng-repeat="abtdata in aboutcontent">{{abtdata.Intro}}<br><br>{{abtdata.Tech}}<br><br>{{abtdata.Passtime}}</p>
-      
+      <h1 style="font-size:50px"> < / about me > </h1> 
 </div>
 </div>
 </section>
@@ -97,12 +97,27 @@
 <div class="title col-xs-8">
 <hc-chart options="chartOptions"></hc-chart>
 </div>
-<div class="col-xs-4">
-  <h1>Others</h1>
+<div class="others col-xs-4">
+  <h2 class="text-center">Others</h2>
   <ul>
-    <li> Good understanding of datastructures and algorithm</li>
-    <li> Knowledge of linux</li>
+    <li class="glyphicon glyphicon-ok"> Good understanding of: </li>
+    <ul>
+    <li class="glyphicon glyphicon-ok-sign"> Data Structures and Algorithms</li>
+    <li class="glyphicon glyphicon-ok-sign"> Object Oriented Design Pattern </li>
+    <li class="glyphicon glyphicon-ok-sign"> Object Oriented Concepts </li>
+    </ul>
+    <li class="glyphicon glyphicon-ok"> Knowledge of linux </li>
   </ul>
+  <h2 class="text-center">Relevant Courses</h2>
+  <ul>
+    <li class="glyphicon glyphicon-book"> Design and Analysis of Algorithms</li>
+    <li class="glyphicon glyphicon-book"> Distributed Systems</li>
+    <li class="glyphicon glyphicon-book"> Functional Programming </li>
+    <li class="glyphicon glyphicon-book"> Machine Learning </li>
+    <li class="glyphicon glyphicon-book"> Data Structures </li>
+    <li class="glyphicon glyphicon-book"> DataBases </li>
+    <li class="glyphicon glyphicon-book"> Cloud Computing </li>
+    </ul>
 </div>
 </div>
 </section>

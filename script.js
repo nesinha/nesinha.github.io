@@ -53,14 +53,14 @@ function($scope,$location, $anchorScroll){
   
 
 
-  $scope.aboutcontent=[{Intro:"I am an India-native now living in San Diego, California, pursuing my Masters in Computer Science. I am interested in creating scalable web apps with amazingly great UI/UX. Previously I worked full time on e-commerce website of Microchip Technology.",Tech:"I am specialized in Microsoft .Net web forms and MVC architecture. I am conformtable with javaScript, CSS, bootstrap. I can also talk to database(MYSQL) using ADO.NET and Entity Relationship. I am exploring angular javascript and have built this website using angular javascript. I like working on scalability, performance, design, and great user experiences. ", Passtime:"My favourite passtime is to read a book (novel or inspirational) sipping a cup of coffee!"}];
+  $scope.aboutcontent=[{Intro:"I am an international graduate student living in San Diego, California, pursuing my Masters in Computer Science. I am interested in creating scalable web apps with amazingly great UI/UX. Previously I worked full time on e-commerce website of Microchip Technology.",Tech:"I am specialized in Microsoft .Net web forms and MVC architecture. I am comfortable with javaScript, CSS, bootstrap. I can also talk to database(MYSQL) using ADO.NET and Entity Relationship. I am exploring angular javascript and have built this website using angular javascript. I like working on scalability, performance, design, and great user experiences. ", Passtime:"My favourite passtime is to read a book (novel or inspirational) sipping a cup of coffee!"}];
   
- $scope.timelineEvents=[{Event:'Graduating soon',Desc:'bah bah',On:'April-2017',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
- {Event:'Teaching Assistant',Desc:'bah bah',On:'August-2016',Pic:'http://www.sysnet.ucsd.edu/~voelker/pubcom/logo/CSELogo_RGB.gif'},
- {Event:'Joined UCSD',Desc:'ehi',On:'Sept-2015',Pic:'http://www.universityreview.org/wp-content/uploads/2012/03/University-of-California-San-Diego-Seal.png'},
- {Event:'Software Engineer - 1',Desc:'Promoted to Software Engineer 1. We moved to .Net MVC and got opprotunity to work on more challenging projects.',On:'July-1-2014',Pic:'http://www.dcdcselector.com/media/Microchipdirect-Logo-s_356_l.png'},
- {Event:'Trainee Software Engineer',Desc:'Joined Microchip Technology in Bangalore as Trainee Software Engineer. I joined an amazing team at MCHP - internet and intranet application team. We used .Net framework 3.5 c# webform application, Sql mainly. I was an integral part of microchips e-commerce website microchipdirect.com.',On:'July-1-2013',Pic:'https://upload.wikimedia.org/wikipedia/en/9/92/MicrochipTechnology_Logo.png'},
- {Event:'Bachelors in Computer Science',Desc:'Graduated from MSRIT with the degree in Bachelors of Computer Science.',On:'June-2013',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
+ $scope.timelineEvents=[{Event:'Graduating soon',Desc:'I am planning to graduate by winter quarter(March end). My current GPA at UCSD is 3.75/4',On:'April-2017',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
+ {Event:'Teaching Assistant',Desc:'I assisted a class of 30 students under professor Issac Chu independently or in small groups in the development of project. Course: Enterprise-class Web Application. Technology used: MySQL, MVC architecture, API, ajax, knockout.js, MOQ framework',On:'August-2016',Pic:'http://www.sysnet.ucsd.edu/~voelker/pubcom/logo/CSELogo_RGB.gif'},
+ {Event:'Joined UCSD',Desc:'I joined University of California, San Diego for my masters in Computer Science. Jacob\'s School of Engineering of UCSD is one of the top computer science colleges in world.Checkout wiki for more information',On:'Sept-2015',Pic:'http://www.universityreview.org/wp-content/uploads/2012/03/University-of-California-San-Diego-Seal.png'},
+ {Event:'Software Engineer - 1',Desc:'Promoted to Software Engineer 1. Having moved to .Net MVC from web forms gave me an opprotunity to work on more challenging projects like creating API for the product and caching .',On:'July-1-2014',Pic:'http://www.dcdcselector.com/media/Microchipdirect-Logo-s_356_l.png'},
+ {Event:'Trainee Software Engineer',Desc:'Cleared the on campus interview and accepted the offer from Microchip Technology in Bangalore as Trainee Software Engineer,Bangalore, India. I joined an amazing team at MCHP - internet and intranet application team. I was an integral part of microchip\'s e-commerce website microchipdirect.com.',On:'July-1-2013',Pic:'https://upload.wikimedia.org/wikipedia/en/9/92/MicrochipTechnology_Logo.png'},
+ {Event:'Bachelors in Computer Science',Desc:'Graduated from MSRIT with the degree in Bachelors of Computer Science.My GPA was 9.54/10',On:'June-2013',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
  {Event:'Joined MSRIT',Desc:'I joined M.S. Ramaiah Institute of Technology, Bangalore, India to pursue bachelors in Computer Science. MSRIT is one the top five college in the state of karnataka. Checkout wiki for more information.',On:'Sept-09-2009',Pic:'https://upload.wikimedia.org/wikipedia/en/b/b8/MSRIT_Golden_Jubilee_Logo.png'}
  ];
  
@@ -76,7 +76,7 @@ $scope.hidePopover = function () {
 };
  
  
- $scope.yAxisLabel = ['less than 1','1-2','2-3','3-4','4 and above'];
+ $scope.yAxisLabel = ['0','less than 1','1-1.9','2-2.9','3-3.9','4 and above'];
  
  
   $scope.chartOptions = {
@@ -96,12 +96,12 @@ $scope.hidePopover = function () {
          },
 
   series: [{
-           data: [3,2,2,1,2,5,1,4]
+           data: [5,5,4,4,1,1,5,4]
           }],
           
  yAxis: { 
          min: 0,
-         max: 4,
+         max: 5,
          title: {
                 text: 'Years of Experience'
             },
