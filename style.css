@@ -201,8 +201,8 @@ h1.textwithshadow
 {
 white-space: nowrap;
 overflow: hidden;
-width: 40em;
-margin:80px 20px 60px 650px;
+width: 30em;
+margin:40px 20px 60px 600px;
 animation: type 4s steps(60, end);
 }
 
