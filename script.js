@@ -121,8 +121,10 @@ $scope.hidePopover = function () {
 app.controller("portfolioController",function($scope){
   $scope.pageClass = "page-portfolio";
   $scope.projects = [{Link:'http://codepen.io/nesinha/full/RRZEww/',Type:'Random Quotes',Src:'http://i.imgur.com/It04LL9.png',Desc:'Used an API from mashape that has mutiple quotes. The application genrates new quotes upon click of button and changes the background color on every click. You can also tweet the quote on page!'},
+                     {Link:'https://github.com/nesinha/nesinha.github.io',Type:'My Portfolio',Src:'http://i.imgur.com/25dPNYL.png',Desc:'Used Angular JavaScript and HTML/CSS/Bootstrap to design and develop this website. This website is built from scratch.'},
                      {Link:'http://codepen.io/nesinha/full/BLpvOR/',Type:'Weather Application',Src:'http://i.imgur.com/qnni1mY.png',Desc:'Used an API from openweathermap to detect current location and project it on map. It displays the temperature in degree celsius and fahreheit along with weather description. The weather icon changes based on weather type. '},
-                     {Link:'',Type:'Wikipedia Viewer',Src:'http://i.imgur.com/QO84elb.jpg',Desc:'Search for keywords with autopopulate feature. Display mutiple results based on search words. The result would direct to wikipedia page.'}];
+                     {Link:'',Type:'Wikipedia Viewer',Src:'http://i.imgur.com/QO84elb.jpg',Desc:'Search for keywords with autopopulate feature. Display mutiple results based on search words. The result would direct to wikipedia page.'},
+                     {Link:'https://leetcode.com/28nehasinhagmailcom/',Type:'LeetCode Problems',Src:'http://i.imgur.com/2pPNkHr.png',Desc:'Search for keywords with autopopulate feature. Display mutiple results based on search words. The result would direct to wikipedia page.'}];
 });
 
 app.controller("resumeController",function($scope){
