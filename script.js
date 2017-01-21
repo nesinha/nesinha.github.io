@@ -91,7 +91,7 @@ $scope.hidePopover = function () {
          text: 'My skills'
           },
   xAxis: {
-           categories: ['C++','.net MVC','Angular','C# .net webforms','Bootstrap','Javascript & Jquery','HTML & CSS','SQL']
+           categories: ['C++','.net MVC','C# .net webforms','Angular','Bootstrap','Javascript & Jquery','HTML & CSS','SQL']
            
          },
 
