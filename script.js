@@ -91,12 +91,12 @@ $scope.hidePopover = function () {
          text: 'My skills'
           },
   xAxis: {
-           categories: ['HTML & CSS', 'Javascript & Jquery', 'C# .net webforms', '.net MVC','Angular','Bootstrap','C++','SQL']
+           categories: ['C++','.net MVC','Angular','C# .net webforms','Bootstrap','Javascript & Jquery','HTML & CSS','SQL']
            
          },
 
   series: [{
-           data: [5,5,4,4,1,1,5,4]
+           data: [5,4,4,1,1,5,5,4]
           }],
           
  yAxis: { 
