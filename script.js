@@ -2,35 +2,35 @@ var app=angular.module("myPortfolio",["ngRoute"]);
 
 app.config(function($routeProvider){
   $routeProvider
-  
-  
+
+
   .when("/about",{
     templateUrl:"about.html",
     controller :"aboutController"
   })
-  
+
   .when("/portfolio",{
     templateUrl:"portfolio.html",
     controller :"portfolioController"
   })
-  
+
   .when("/resume",{
     templateUrl:"resume.html",
     controller :"resumeController"
   })
-  
+
   .when("/contact",{
     templateUrl:"contact.html",
     controller :"contactController"
   })
-  
+
   .otherwise({redirectTo:"/about"})
 });
 
 
-app.controller("aboutController",['$scope','$location', '$anchorScroll', 
+app.controller("aboutController",['$scope','$location', '$anchorScroll',
 function($scope,$location, $anchorScroll){
-  
+
   $scope.pageClass = "page-about";
   $scope.ddesc= "Default";
   $scope.gotoMytimeline = function()
@@ -43,19 +43,19 @@ function($scope,$location, $anchorScroll){
      $location.hash('myskills');
       $anchorScroll();
   };
-  
+
   $scope.gotoAbout = function()
   {
     $location.hash('aboutme');
       $anchorScroll();
   }
-  
-  
+
+
 
 
   $scope.aboutcontent=[{Intro:"I am a computer science graduate student living in San Diego, California, pursuing my Masters. I am actively looking for full time opportunity as Software Engineer. Previously I worked full time as software engineer for Microchip Technology.",Tech:"I have good understanding of data structures and algorithms. I can program in c++. I am specialized in Microsoft .Net web forms and MVC architecture. I am comfortable with javaScript, CSS, bootstrap. I can also talk to database(MYSQL) using ADO.NET and Entity Relationship. I am exploring angular javascript and have built this website using angular javascript.", Passtime:"My favourite passtime is to read a book (novel or inspirational) sipping a cup of coffee!"}];
-  
- $scope.timelineEvents=[{Event:'Graduating soon',Desc:'I am planning to graduate by spring quarter(June). My current GPA at UCSD is 3.8/4',On:'April-2017',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
+
+ $scope.timelineEvents=[{Event:'Graduated',Desc:'I am planning to graduate by spring quarter(June). My current GPA at UCSD is 3.8/4',On:'April-2017',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
  {Event:'Teaching Assistant',Desc:'I assisted a class of 30 students under professor Issac Chu independently or in small groups in the development of project. Course: Enterprise-class Web Application. Technology used: MySQL, MVC architecture, API, ajax, knockout.js, MOQ framework',On:'August-2016',Pic:'http://www.sysnet.ucsd.edu/~voelker/pubcom/logo/CSELogo_RGB.gif'},
  {Event:'Joined UCSD',Desc:'I joined University of California, San Diego for my masters in Computer Science. Jacob\'s School of Engineering of UCSD is one of the top computer science colleges in world.Checkout wiki for more information',On:'Sept-2015',Pic:'http://www.universityreview.org/wp-content/uploads/2012/03/University-of-California-San-Diego-Seal.png'},
  {Event:'Software Engineer - 1',Desc:'Promoted to Software Engineer 1. Having moved to .Net MVC from web forms gave me an opprotunity to work on more challenging projects like creating API for the product and caching .',On:'July-1-2014',Pic:'http://www.dcdcselector.com/media/Microchipdirect-Logo-s_356_l.png'},
@@ -63,22 +63,22 @@ function($scope,$location, $anchorScroll){
  {Event:'Bachelors in Computer Science',Desc:'Graduated from MSRIT with the degree in Bachelors of Computer Science.My GPA was 9.54/10',On:'June-2013',Pic:'http://icons.iconarchive.com/icons/icons8/windows-8/256/Business-Graduation-Cap-icon.png'},
  {Event:'Joined MSRIT',Desc:'I joined M.S. Ramaiah Institute of Technology, Bangalore, India to pursue bachelors in Computer Science. MSRIT is one the top five college in the state of karnataka. Checkout wiki for more information.',On:'Sept-09-2009',Pic:'https://upload.wikimedia.org/wikipedia/en/b/b8/MSRIT_Golden_Jubilee_Logo.png'}
  ];
- 
+
  $scope.showPopover = function(data) {
-  $scope.popoverIsVisible = true; 
+  $scope.popoverIsVisible = true;
   $scope.description=data;
- 
+
  };
 
 $scope.hidePopover = function () {
   $scope.popoverIsVisible = false;
- 
+
 };
- 
- 
+
+
  $scope.yAxisLabel = ['0','less than 1','1-1.9','2-2.9','3-3.9','4 and above'];
- 
- 
+
+
   $scope.chartOptions = {
     chart: {
          type: 'column',
@@ -86,20 +86,20 @@ $scope.hidePopover = function () {
           width: 850,
           marginLeft:150
             },
-  
+
    title: {
          text: 'My skills'
           },
   xAxis: {
            categories: ['C++','.net MVC','C# .net webforms','Angular','Bootstrap','Javascript & Jquery','HTML & CSS','SQL']
-           
+
          },
 
   series: [{
            data: [5,4,4,1,1,5,5,4]
           }],
-          
- yAxis: { 
+
+ yAxis: {
          min: 0,
          max: 5,
          title: {
@@ -109,13 +109,13 @@ $scope.hidePopover = function () {
             formatter: function() {
                 return $scope.yAxisLabel[this.value];
             }
-          
+
         }
     }
-       
-  
+
+
   };
-  
+
 }]);
 
 app.controller("portfolioController",function($scope){
@@ -129,7 +129,7 @@ app.controller("portfolioController",function($scope){
 
 app.controller("resumeController",function($scope){
   $scope.pageClass = "page-resume";
-  
+
 });
 
 
@@ -138,14 +138,14 @@ app.controller("contactController",['$scope','$http', function($scope,$http){
   $scope.user = {};
   $scope.send = function(){
  $http({
-    url: "//formspree.io/28neha@gmail.com", 
+    url: "//formspree.io/28neha@gmail.com",
     method: "POST",
     data:JSON.stringify($scope.user),
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded'
     }
-  
+
 });
 alert('Thanks for the email.');
 }
@@ -198,4 +198,3 @@ app.directive('myPortfolioFooter', function() {
     templateUrl: 'footer.html'
   };
 });
-            
